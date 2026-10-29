@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TP2 - Geolocalización y Leaflet</title>
+
+  <!-- CSS obligatorio de Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Panel lateral -->
+    <div class="sidebar">
+      <h2>Ingresar Coordenadas</h2>
+      <form id="form-coordenadas">
+        <input type="number" id="input-lat" step="any" placeholder="Latitud (ej: -24.74073)" required />
+        <input type="number" id="input-lng" step="any" placeholder="Longitud (ej: -65.39136)" required />
+        <button type="submit">Agregar Punto</button>
+      </form>
+
+      <h2>Rutas al Destino</h2>
+      <p class="instruccion">👉 Haz clic en el mapa para fijar un <strong>Destino (Pin Rojo)</strong>.</p>
+      <div id="rutas-info"></div>
+
+      <h2>Historial de Posiciones</h2>
+      <ul id="posiciones-lista"></ul>
+    </div>
+
+    <!-- Contenedor del mapa -->
+    <div id="map"></div>
+  </div>
+
+  <!-- JS de Leaflet y script propio -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
